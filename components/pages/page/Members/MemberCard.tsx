@@ -12,8 +12,7 @@ const Content = (props: Member) => {
       <div className="flex items-start mb-2">
         <Image src={props.avatar} alt="Avatar"
           width={48} height={48}
-          className="mr-4 rounded-full"
-        />
+          className="mr-4 rounded-full" />
         <div>
           <Title>{props.name}</Title>
           <p className="opacity-50">{props.brief}</p>

@@ -1,13 +1,8 @@
-import Card from "@/components/base/Card"
-import VideoCard from "./VideoCard"
 import BigTitle from "@/components/base/BigTitle"
-
-export interface Video {
-  title: string
-  desc: string
-  cover: string
-  link: string
-}
+import { Video } from "../Videos"
+import Link from "next/link"
+import classNames from "classnames"
+import Title from "@/components/base/Title"
 
 const getVideos = async () => {
   const videos: Video[] = [{
@@ -35,21 +30,37 @@ const getVideos = async () => {
   return videos
 }
 
-const Videos = async () => {
+const VideosM = async () => {
   const videos = await getVideos()
   return (
-    <div className="h-screen max-h-[48rem] flex">
-      <div className="grid grid-cols-7 grid-rows-2 gap-4 h-[36rem] m-auto w-full">
-        <VideoCard {...videos[1]} />
-        <VideoCard {...videos[2]} />
-        <VideoCard {...videos[0]} main />
-        <Card className="flex col-span-2">
-          <BigTitle title={['动画', '作品']} className="m-auto text-center flex" />
-        </Card>
-        <VideoCard {...videos[3]} />
+    <section className="mb-24">
+      <BigTitle title={['动画', '作品']} className="flex w-fit mb-12 ml-6" />
+      <div className="flex snap-x snap-mandatory overflow-x-auto">
+        <div className="snap-start scroll-mx-6 mr-6 shrink-0" />
+        {videos.map((video, i) => (
+          <Link href={video.link} target="_blank" key={i} className="snap-start scroll-mx-6 mr-6 shrink-0 h-96 w-64">
+            <div className="rounded-xl overflow-hidden shadow-sm bg-cover bg-center h-full"
+              style={{ backgroundImage: `url('/videos/${video.cover}.jpg')` }}>
+              <div className={classNames(
+                'h-full w-full',
+                'bg-gradient-to-t from-black/50 to-transparent',
+                'p-4',
+                'flex flex-col justify-end'
+              )}>
+                <Title className={classNames(
+                  'text-white line-clamp-2',
+                  { '-indent-3': video.title.startsWith('【') }
+                )}>{video.title}</Title>
+                <p className="opacity-80 text-white line-clamp-2">
+                  {video.desc}
+                </p>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Videos
+export default VideosM

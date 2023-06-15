@@ -10,7 +10,7 @@ const Card = (props: Props) => {
     <div className={classNames(
       props.className,
       'shadow-sm',
-      'bg-lbg dark:bg-dbg',
+      'bg-lbg dark:bg-dbg border dark:border-white/10',
       'rounded-xl',
       'p-6'
     )}>

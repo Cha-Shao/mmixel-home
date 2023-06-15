@@ -38,7 +38,7 @@ const getWorks = async () => {
 const Works = async () => {
   const works = await getWorks()
   return (
-    <div className="min-h-screen flex">
+    <div className="h-screen max-h-[48rem] flex">
       <div className='grid grid-cols-10 grid-rows-7 gap-4 h-[36rem] m-auto w-full'>
         <WorkCard {...works[0]} />
         <Card className="col-span-4 row-span-7 flex">

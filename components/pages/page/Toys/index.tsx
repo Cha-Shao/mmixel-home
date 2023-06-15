@@ -15,7 +15,7 @@ const getToys = async () => {
 const Toys = async () => {
   const toys = await getToys()
   return (
-    <div className="min-h-screen flex">
+    <div className="h-screen max-h-[48rem] flex">
       <div className="grid grid-cols-7 grid-rows-2 gap-4 h-[36rem] m-auto w-full">
         <Image src={`/toys/${toys[0]}.jpg`} alt="Toy"
           width={512} height={512}

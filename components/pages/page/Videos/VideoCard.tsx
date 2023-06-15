@@ -13,7 +13,7 @@ const VideoCard = (props: Video & { main?: boolean }) => {
         { 'row-span-2': props.main }
       )}>
       <div
-        className="rounded-xl overflow-hidden shadow-sm bg-cover h-full"
+        className="rounded-xl overflow-hidden shadow-sm bg-cover bg-center h-full"
         style={{ backgroundImage: `url('/videos/${props.cover}.jpg')` }}>
         <div className={classNames(
           'h-full w-full',
@@ -21,7 +21,7 @@ const VideoCard = (props: Video & { main?: boolean }) => {
           'p-4',
           'flex flex-col justify-end'
         )}>
-          <Title size="md" className={classNames(
+          <Title className={classNames(
             'text-white line-clamp-2',
             { '-indent-3': props.title.startsWith('【') }
           )}>{props.title}</Title>
