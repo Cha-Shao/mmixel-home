@@ -1,9 +1,9 @@
 'use client'
 import { useState } from "react"
-import { Member } from "../Members"
 import Image from "next/image"
 import MemberCard from "../Members/MemberCard"
 import classNames from "classnames"
+import { Member } from "@/types/members"
 
 const MembersView = (props: Member[]) => {
   const [index, setIndex] = useState<number>(0)

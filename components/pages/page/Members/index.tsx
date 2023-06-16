@@ -1,14 +1,7 @@
 import BigTitle from "@/components/base/BigTitle"
 import { chunk, shuffle } from 'lodash'
 import MemberCard from "./MemberCard"
-
-export interface Member {
-  avatar: string
-  name: string
-  brief: string
-  content: string
-  link?: string
-}
+import { Member } from "@/types/members"
 
 const getMembers = async () => {
   const members: Member[] = [{

@@ -1,10 +1,10 @@
 import Card from "@/components/base/Card"
-import { Member } from "."
 import Title from "@/components/base/Title"
 import Image from "next/image"
 import ClientIcon from "@/components/base/ClientIcon"
 import ExternalLinkLine from '@iconify/icons-ri/external-link-line'
 import Link from "next/link"
+import { Member } from "@/types/members"
 
 const Content = (props: Member) => {
   return (

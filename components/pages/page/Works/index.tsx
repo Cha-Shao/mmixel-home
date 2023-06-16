@@ -1,13 +1,7 @@
 import BigTitle from "@/components/base/BigTitle"
 import Card from "@/components/base/Card"
 import WorkCard from "./WorkCard"
-
-export interface Work {
-  label: string
-  icon: string
-  href: string
-  grid: [number, number]
-}
+import { Work } from "@/types/works"
 
 const getWorks = async () => {
   const works: Work[] = [{
