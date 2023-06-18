@@ -1,10 +1,17 @@
+'use client'
 import ClientIcon from "@/components/base/ClientIcon";
 import Title from "@/components/base/Title";
+import classNames from "classnames";
 import Image from "next/image";
+import { useMediaQuery } from '@material-ui/core'
 
 const Hero = () => {
+  const isDark = useMediaQuery('(prefers-color-scheme: dark)')
   return (
-    <div className="bg-hero bg-[length:100%_100%]">
+    <div className={classNames(
+      isDark ? 'bg-hero-dark' : 'bg-hero',
+      'bg-[length:100%_100%]'
+    )}>
       <div className="flex flex-col justify-center items-center text-center h-screen relative px-6">
         <Image src='/icon.svg' alt='Logo'
           width={384} height={384}
