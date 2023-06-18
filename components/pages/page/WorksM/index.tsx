@@ -1,9 +1,9 @@
 import Card from "@/components/base/Card"
-import { Work } from "../Works"
 import Link from "next/link"
 import Image from "next/image"
 import Title from "@/components/base/Title"
 import BigTitle from "@/components/base/BigTitle"
+import { Work } from "@/types/works"
 
 const getWorks = async () => {
   const works: Work[] = [{

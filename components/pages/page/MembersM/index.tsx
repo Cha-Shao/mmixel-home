@@ -1,7 +1,7 @@
-import { chunk, shuffle } from "lodash"
-import { Member } from "../Members"
+import { shuffle } from "lodash"
 import BigTitle from "@/components/base/BigTitle"
 import MembersView from "./MembersView"
+import { Member } from "@/types/members"
 
 const getMembers = async () => {
   const members: Member[] = [{

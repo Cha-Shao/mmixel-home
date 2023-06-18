@@ -1,5 +1,5 @@
 import Title from "@/components/base/Title"
-import type { Video } from "."
+import { Video } from "@/types/videos"
 import classNames from "classnames"
 import Link from "next/link"
 

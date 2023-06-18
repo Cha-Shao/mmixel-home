@@ -1,13 +1,7 @@
 import Card from "@/components/base/Card"
 import VideoCard from "./VideoCard"
 import BigTitle from "@/components/base/BigTitle"
-
-export interface Video {
-  title: string
-  desc: string
-  cover: string
-  link: string
-}
+import { Video } from "@/types/videos"
 
 const getVideos = async () => {
   const videos: Video[] = [{

@@ -1,8 +1,8 @@
 import Card from "@/components/base/Card"
 import Title from "@/components/base/Title"
+import { Work } from "@/types/works"
 import Image from "next/image"
 import Link from "next/link"
-import { Work } from "."
 
 const WorkCard = (props: Work) => {
   return (

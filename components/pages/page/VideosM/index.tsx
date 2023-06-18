@@ -1,8 +1,8 @@
 import BigTitle from "@/components/base/BigTitle"
-import { Video } from "../Videos"
 import Link from "next/link"
 import classNames from "classnames"
 import Title from "@/components/base/Title"
+import { Video } from "@/types/videos"
 
 const getVideos = async () => {
   const videos: Video[] = [{
