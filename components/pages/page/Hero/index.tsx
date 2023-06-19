@@ -10,7 +10,8 @@ const Hero = () => {
   return (
     <div className={classNames(
       isDark ? 'bg-hero-dark' : 'bg-hero',
-      'bg-[length:100%_100%]'
+      // 'bg-cover aspect-[1920/1440]'
+      'bg-cover bg-center'
     )}>
       <div className="flex flex-col justify-center items-center text-center h-screen relative px-6">
         <Image src='/icon.svg' alt='Logo'
@@ -23,7 +24,7 @@ const Hero = () => {
         <p>但我们从未害怕过</p>
         <ClientIcon icon="ri:arrow-down-double-line" width={32} className="absolute opacity-25 bottom-4 animate-bounce" />
       </div>
-      <div className="h-48 hidden md:block" />
+      <div className="h-[calc(100vh/4)] bg-gradient-to-b from-transparent to-lpbg dark:to-dpbg" />
     </div>
   )
 };
