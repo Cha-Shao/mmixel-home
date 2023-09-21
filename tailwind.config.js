@@ -11,8 +11,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        hero: "url('/hero.png')",
-        "hero-dark": "url('/hero-dark.png')",
+        hero: "url('/hero.webp')",
+        "hero-dark": "url('/hero-dark.webp')",
       },
       colors: {
         main: '#ff8729',
@@ -47,21 +47,5 @@ module.exports = {
       },
       aspectRatio: { photo: '8 / 6' },
     },
-    fontSize: {
-      ty: ['0.875rem', '1'],
-      sm: ['1.25rem', '1.25'],
-      md: ['1.5rem', {
-        lineHeight: '1',
-        fontWeight: '700'
-      }],
-      lg: ['1.875rem', {
-        lineHeight: '1',
-        fontWeight: '700'
-      }],
-      xl: ['3rem', {
-        lineHeight: '1',
-        fontWeight: '700'
-      }]
-    }
   },
 }

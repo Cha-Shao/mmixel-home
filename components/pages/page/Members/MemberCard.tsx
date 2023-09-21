@@ -14,8 +14,8 @@ const Content = (props: Member) => {
           width={48} height={48}
           className="mr-4 rounded-full" />
         <div>
-          <Title>{props.name}</Title>
-          <p className="opacity-50">{props.brief}</p>
+          <Title size="sm">{props.name}</Title>
+          <p className="opacity-50 text-sm">{props.brief}</p>
         </div>
       </div>
       <p>{props.content}</p>

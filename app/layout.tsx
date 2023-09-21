@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import './globals.css'
 import localFont from 'next/font/local'
 import classNames from 'classnames'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: '映素团队',
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={classNames(misans.className)}>
         {children}
+        <Footer />
       </body>
     </html>
   )
