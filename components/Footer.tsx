@@ -7,7 +7,7 @@ const Footer = () => {
         <Link href={'/'} className="text-sm">
           Copyright © 2023 MMixel
         </Link>
-        <Link href="https://beian.miit.gov.cn/" target="_blank" className="text-sm flex items-center">
+        <Link href="https://beian.miit.gov.cn/" target="_blank" className="text-sm">
           黑ICP备19000898号-5
         </Link>
       </div>
