@@ -149,6 +149,11 @@ const getMembers = async () => {
     brief: '低产动作人，高产摸鱼人',
     content: '头号洒家，精通动作，如有业务请与本人沟通后确定事项，愿老板们能找到合适的打工人',
     avatar: '/avatars/duanmu.jpg',
+  }, {
+    name: '梨木利亚',
+    brief: '雕像',
+    content: '映素的董事代理以及顾问，会尽可能的做好各种方面的协助的',
+    avatar: '/avatars/limuliya.jpg'
   }]
   return chunk(shuffle(members), Math.round(members.length / 3))
 }
